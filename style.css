@@ -42,8 +42,7 @@ main {
 
 nav {
   height: 50px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 140px;
+  display: flex;
   background: var(--secondary);
   color: var(--gray-4);
 }
@@ -59,29 +58,9 @@ nav img {
   height: 30px;
 }
 
-nav section:last-child {
+nav section {
   justify-content: flex-end;
-  margin-right: var(--spacer-5);
-}
-
-nav section ul {
-  width: 35%;
-  display: flex;
-  align-self: center;
-  justify-content: space-evenly;
-  list-style: none;
-}
-
-nav section ul a {
-  text-decoration: none;
-  color: inherit;
-  font-size: var(--font-size-4);
-  font-weight: var(--font-weight-heavy);
-  padding-bottom: 5px;
-}
-
-nav section ul a:hover {
-  border-bottom: var(--gray-4) solid 2px;
+  margin-left: var(--spacer-5);
 }
 
 /*Content*/
@@ -149,16 +128,8 @@ nav section ul a:hover {
 /*Responsive*/
 
 @media (max-width: 1280px) {
-  nav {
-    grid-template-columns: 1fr 2fr 65px;
-  }
-
-  nav section:first-child {
-    margin-right: var(--spacer-5);
-  }
-
-  nav section ul {
-    width: 50%;
+  nav section {
+    margin-left: var(--spacer-5);
   }
 
   .main-content {
@@ -169,10 +140,6 @@ nav section ul a:hover {
 @media (max-width: 860px) {
   nav {
     grid-template-columns: 1fr 2fr;
-  }
-
-  nav section ul {
-    width: 75%;
   }
 
   .main-content {
@@ -194,9 +161,13 @@ nav section ul a:hover {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   .card {
     max-width: none;
     width: 90%;
+  }
+
+  nav section {
+    margin-left: var(--spacer-1);
   }
 }
