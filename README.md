@@ -1,2 +1,0 @@
-# landing-dogos
-landing responsivo
